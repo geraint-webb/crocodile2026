@@ -131,7 +131,7 @@ fi
 # --notebooks renders with the CrocoDash env's Python. When CrocoDash isn't
 # being installed in this run, reuse the env an earlier install built.
 if [[ "$INSTALL_NOTEBOOKS" -eq 1 && "$INSTALL_CROCODASH" -eq 0 && "$ENVS_ONLY" -eq 0 ]]; then
-    CROCODASH_ENV_NAME="${ENV_PREFIX:+${ENV_PREFIX}-}CrocoDash"
+    CROCODASH_ENV_NAME="${ENV_PREFIX:+${ENV_PREFIX}-}CrocoDash2026"
     if ! conda env list | awk '{print $1}' | grep -qx "$CROCODASH_ENV_NAME"; then
         echo "Error: --notebooks needs the CrocoDash conda env '$CROCODASH_ENV_NAME'." >&2
         echo "Install it too with: ./install.sh --crocodash --notebooks" >&2
